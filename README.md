@@ -13,12 +13,7 @@ Lately, Large Language Models (LLMs) are being explored quite extensively for te
 
 ## Dataset
 
-- [The Wiki Intro Dataset](https://huggingface.co/datasets/aadityaubhat/GPT-wiki-intro) is used to train the model. It comprises of 150k topics, with a varied distribution of machine-generated text, created by GPT (Curie) model and human-written text. These samples cover various domains, collected from Wikipedia. A prompt was used to generate the GPT response using the title of the Wikipedia page and the first seven words from the introduction paragraph. Prompt used for generating text:
-\begin{center}
-\textit{200 word Wikipedia-style introduction on '\{title\}'} \\
-\{starter\_text\}
-\end{center}
-where \{title\} is the title for the Wikipedia page, and \{starter\_text\} is the first seven words of the Wikipedia introduction.
+- [The Wiki Intro Dataset](https://huggingface.co/datasets/aadityaubhat/GPT-wiki-intro) is used to train the model. It comprises of 150k topics, with a varied distribution of machine-generated text, created by GPT (Curie) model and human-written text. These samples cover various domains, collected from Wikipedia. A prompt was used to generate the GPT response using the title of the Wikipedia page and the first seven words from the introduction paragraph. Prompt used for generating text: **200 word Wikipedia-style introduction on '\{title\}' {starter\_text\}** where \{title\} is the title for the Wikipedia page, and \{starter\_text\} is the first seven words of the Wikipedia introduction.
 
 ## Baseline
 
