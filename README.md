@@ -26,7 +26,7 @@ ii. Model 2: RADAR framework: Here, the detector model, a pre-trained RoBERTa mo
 
 ## Our Approach
 
-- Run the [notebook](https://github.com/reshmaram-gt/AI-text-detection/blob/main/RADAR.ipynb)), which will automatically install the necessary dependencies to yield the output.
+- Run the [notebook](https://github.com/reshmaram-gt/AI-text-detection/blob/main/RADAR.ipynb), which will automatically install the necessary dependencies to yield the output.
 
 - We utilized the Google Cloud Platform(GCP) to avail GPU’s to train our model. We used a ’g2-standard-24’ Machine Type, using two ’Nvidia L4 GPU’s as accelerators, with a Disk Space of 100GB. For evaluating the outputs, we utilized another machine so as to avoid running into resource issues. We used a ’g2-standard-16’ Machine Type supported with one ’Nvidia L4 GPU’ accelerator, with a Disk Space of 100GB.
 
