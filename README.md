@@ -17,10 +17,10 @@ Lately, Large Language Models (LLMs) are being explored quite extensively for te
 
 ## Baseline
 
-- There are two baseline models implemented:
+- There are two baseline models implemented:<br>
 i. Model 1: Baseline - Probabilistic Loss for Detector Training: The paraphraser model is frozen, generating paraphrased inputs as data augmentation for the model to train with. The detector trains on this data, attempting to predict whether the text is AI-generated or not. The detector model trains on Mean-Squared Error loss(MSE), and the training backpropagates through the Value-Head, across the entire LM. This model helps analyze the effect of adversarial learning in improving AI-text detection.
 
-<img width="540" alt="image" src="https://github.com/reshmaram-gt/AI-text-detection/assets/115122663/07b3cf03-23f2-45f3-b716-eb42b04d103b">
+<img width="400" alt="image" src="https://github.com/reshmaram-gt/AI-text-detection/assets/115122663/07b3cf03-23f2-45f3-b716-eb42b04d103b"> <br>
 
 ii. Model 2: RADAR framework: Here, the detector model, a pre-trained RoBERTa model, goes through the training loop to distinguish between AI-generated and human-written text. Simultaneously, a pre-trained T5-large paraphraser rephrases AI-generated text, aiming to evade detection by the aforementioned detector model. The paraphraser undergoes training where the output from the detector serves as a reward signal via the Proximal Policy Optimization (PPO) framework. This incentivizes the paraphrasers to generate text that the detector is less likely to classify as AI-generated. This model helps compare the proposed approach to the state-of-the-art RADAR approach.
 
@@ -32,11 +32,11 @@ ii. Model 2: RADAR framework: Here, the detector model, a pre-trained RoBERTa mo
 
 - The proposed approach utilizes an ensemble paraphraser and a fine-tuned RoBERTa-based detector for AI text detection.
 
-<img width="470" alt="image" src="https://github.com/reshmaram-gt/AI-text-detection/assets/115122663/c1d8959b-1583-455c-8151-8678b17636e7">
+<img width="400" alt="image" src="https://github.com/reshmaram-gt/AI-text-detection/assets/115122663/c1d8959b-1583-455c-8151-8678b17636e7">
 
 - The AUROC plots for the three models shows that the proposed model outperforms the two baselines for the Wiki Intro Dataset.
 
-<img width="244" alt="image" src="https://github.com/reshmaram-gt/AI-text-detection/assets/115122663/b7f3a8ce-73f6-4d49-b772-2536ac69386f">
+<img width="400" alt="image" src="https://github.com/reshmaram-gt/AI-text-detection/assets/115122663/b7f3a8ce-73f6-4d49-b772-2536ac69386f">
 
 - The final outputs and evaluation results are detailed in the [Final Report](#final_report.pdf) 
 
