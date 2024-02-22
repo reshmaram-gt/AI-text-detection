@@ -17,8 +17,8 @@ Lately, Large Language Models (LLMs) are being explored quite extensively for te
 
 ## Baseline
 
-- There are two baseline models implemented:<br>
-i. Model 1: Baseline - Probabilistic Loss for Detector Training: The paraphraser model is frozen, generating paraphrased inputs as data augmentation for the model to train with. The detector trains on this data, attempting to predict whether the text is AI-generated or not. The detector model trains on Mean-Squared Error loss(MSE), and the training backpropagates through the Value-Head, across the entire LM. This model helps analyze the effect of adversarial learning in improving AI-text detection.
+Two baseline models were implemented:<br>
+i. Model 1: Probabilistic Loss for Detector Training: The paraphraser model, who's weights are frozen, generates paraphrased outputs of given input text. The detector trains on this data, attempting to predict whether the text is AI-generated or not. The detector model trains on Mean-Squared Error loss(MSE), and the loss is backpropagated during  training, across the entire LM. This model helps analyze the effect of adversarial learning in improving AI-text detection.
 
 <img width="400" alt="image" src="https://github.com/reshmaram-gt/AI-text-detection/assets/115122663/07b3cf03-23f2-45f3-b716-eb42b04d103b"> <br>
 
